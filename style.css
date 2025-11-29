@@ -1,9 +1,53 @@
+
+/*
+உங்கள் எழுத்துருவின் மையத்தில் படத்தை வைக்க, 
+அடிப்படைக் கட்டமைப்பை அமைக்கவும்.
+*/
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #fefefe;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/*
+ஜூஸ் பிரிவுக்கு தேவையான பின்னணிப் படத்திற்கான குறியீடு
+*/
+.juice-section {
+  /* நீங்கள் கொடுத்த எழுத்துருவை மையப்படுத்த */
+  display: flex;
+  justify-content: center; /* கிடைமட்டமாக மையப்படுத்த */
+  align-items: center;    /* செங்குத்தாக மையப்படுத்த */
+
+  /* பிரிவின் உயரத்தை அமைக்கவும் */
+  height: 500px; /* நீங்கள் விரும்பிய அளவை மாற்றலாம் */
+  width: 100%;
   
+  /* === பின்னணி படத்திற்கான முக்கியமான குறியீடு === */
+  background-image: url("'download.jpeg'"); /* <-- பட கோப்பின் பெயரை இங்கே மாற்றவும் */
+  background-size: cover; /* படத்தை முழுவதுமாக நிரப்ப (Cover) */
+  background-position: center; /* படத்தை மையத்தில் இருந்து தொடங்க */
+  background-repeat: no-repeat; /* படம் திரும்பத் திரும்ப வராமல் தடுக்க */
+  /* ========================================= */
+
+  /* எழுத்துருவை படத்தின் மேல் வைக்க ஒரு லேயரை (Layer) உருவாக்கலாம் */
+  background-color: rgba(0, 0, 0, 0.4); /* படத்தின் மேல் ஒரு லேசான கருப்பு லேயர் */
+  background-blend-mode: overlay; /* லேயரை படத்துடன் கலக்க */
+}
+
+/*
+"Fresh & Healthy Juices" என்ற எழுத்துருவின் ஸ்டைல்
+*/
+.juice-text {
+  /* நீங்கள் கொடுத்த இமேஜில் உள்ளதை ஒத்த ஸ்டைல் */
+  color: white; /* எழுத்துருவின் நிறம் */
+  font-size: 3em; /* எழுத்துருவின் அளவு */
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000000; /* எழுத்துருவின் நிழல் */
+
+  /* (விருப்பப்பட்டால்) எழுத்துருவின் நிறத்தை பிங்க் நிறத்தில் அமைக்க */
+  /* color: #FFC0CB; */ 
+  /* text-shadow: 2px 2px 4px #8B0000; */
+}
   header {
     background: pink;
     padding: 20px;
@@ -66,7 +110,7 @@ body {
   }
   
   footer {
-    background: #222;
+    background:pink;
     color: white;
     text-align: center;
     padding: 15px;
